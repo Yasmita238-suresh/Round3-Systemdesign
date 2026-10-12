@@ -1,16 +1,36 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Emergency Ambulance Dispatch Platform
 
-Currently, two official plugins are available:
+## Round 3 – High-Level System Design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Aim
+To design a scalable Emergency Ambulance Dispatch Platform for handling emergency requests, ambulance allocation, and real-time location tracking.
 
-## React Compiler
+### Features
+- Dashboard to view emergency requests and ambulance availability.
+- Request and cancel ambulance services.
+- View ambulance details and emergency status.
+- Simulated real-time ambulance tracking.
+- Hospital information and availability.
+- Seeded dummy data for ambulances, hospitals, and emergency requests.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### System Architecture
+- **Frontend:** React and Tailwind CSS
+- **API Communication:** REST API design
+- **Database:** PostgreSQL for structured data
+- **Caching:** Redis for frequently accessed data
+- **Messaging:** Kafka or RabbitMQ for asynchronous communication
+- **Scalability:** Load balancing and horizontal scaling
 
-## Expanding the Oxlint configuration
+### Working
+1. The user creates an emergency request.
+2. The system identifies and assigns an available ambulance.
+3. The user views ambulance details and simulated location.
+4. The emergency status updates throughout the journey.
+5. The request is completed on hospital arrival or cancelled when permitted.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Note
+This project is a frontend-only prototype using dummy data. Database, caching, messaging, and backend services are included as architectural design concepts and are not connected to live services.
+
+### Result
+The frontend prototype demonstrates the major features and high-level architecture of a scalable Emergency Ambulance Dispatch Platform.
